@@ -1,58 +1,90 @@
-name: Suggestion for dockerfile
-description: Suggest a new dockerfile for the repository
-title: 'Suggestion: '
+name: Suggestion
+
+about: Suggest an idea or improvement for the project
+
+title: "[Suggestion] "
+
 labels:
   - suggestion
+
 body:
   - type: markdown
     attributes:
       value: |
-        Please fill out the following information to suggest a new dockerfile for the repository.
-      required: true
-  - type: markdown
+        ## Suggestion
+        <!-- Provide a clear and concise description of your suggestion -->
+
+  - type: input
+    id: suggestion-title
     attributes:
-      value: |
-        Required information.
-        example: Python 3.8, Node.js 14
+      label: Suggestion Title
+      description: A brief title summarizing your suggestion
+      placeholder: Enter suggestion title
+    validations:
       required: true
-  - type: dropdown
-    id: OS
-    attributes:
-      label: Operating System
-      multiple: true
-      options:
-        - Ubuntu
-        - Debian
-        - Alpine
-        - CentOS
-        - Fedora
-        - Arch Linux
-        - OpenSUSE
-        - RHEL
-        - Oracle Linux
-        - Windows
-      required: true
-  - type: dropdown
-    id: Language
-    attributes:
-      label: Language
-      multiple: true
-      options:
-        - Python
-        - Node.js
-        - Java
-        - PHP
-        - C++
-        - C#
-        - Swift
-        - Kotlin
-        - TypeScript
-        - Shell
-        - Objective-C
-        - PowerShell
+
   - type: textarea
-    id: Additional
+    id: suggestion-description
     attributes:
-      label: Additional information
-      description: Add any additional information that you think is necessary.
-      required: false
+      label: Suggestion Description
+      description: Provide a detailed description of your suggestion
+      placeholder: Enter suggestion description
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: suggestion-priority
+    attributes:
+      label: Priority
+      description: Select the priority level for your suggestion
+      options:
+        - label: Low
+          value: low
+        - label: Medium
+          value: medium
+        - label: High
+          value: high
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion-additional-info
+    attributes:
+      label: Additional Information
+      description: Any additional information or context for your suggestion
+      placeholder: Enter additional information
+
+  - type: textarea
+    id: suggestion-steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce (if applicable)
+      description: If your suggestion involves a problem or bug, provide steps to reproduce it
+      placeholder: Enter steps to reproduce
+
+  - type: textarea
+    id: suggestion-expected-behavior
+    attributes:
+      label: Expected Behavior (if applicable)
+      description: Describe the expected behavior after implementing your suggestion
+      placeholder: Enter expected behavior
+
+  - type: textarea
+    id: suggestion-alternative-solutions
+    attributes:
+      label: Alternative Solutions (if applicable)
+      description: If you have considered any alternative solutions, describe them here
+      placeholder: Enter alternative solutions
+
+  - type: textarea
+    id: suggestion-additional-context
+    attributes:
+      label: Additional Context (if applicable)
+      description: Provide any additional context or screenshots for your suggestion
+      placeholder: Enter additional context
+
+  - type: textarea
+    id: suggestion-related-issues
+    attributes:
+      label: Related Issues (if applicable)
+      description: If your suggestion is related to any existing issues, mention them here
+      placeholder: Enter related issues
