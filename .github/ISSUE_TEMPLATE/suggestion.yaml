@@ -1,0 +1,58 @@
+name: Suggestion for dockerfile
+description: Suggest a new dockerfile for the repository
+title: 'Suggestion: '
+labels:
+  - suggestion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out the following information to suggest a new dockerfile for the repository.
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Required information.
+        example: Python 3.8, Node.js 14
+      required: true
+  - type: dropdown
+    id: OS
+    attributes:
+      label: Operating System
+      multiple: true
+      options:
+        - Ubuntu
+        - Debian
+        - Alpine
+        - CentOS
+        - Fedora
+        - Arch Linux
+        - OpenSUSE
+        - RHEL
+        - Oracle Linux
+        - Windows
+      required: true
+  - type: dropdown
+    id: Language
+    attributes:
+      label: Language
+      multiple: true
+      options:
+        - Python
+        - Node.js
+        - Java
+        - PHP
+        - C++
+        - C#
+        - Swift
+        - Kotlin
+        - TypeScript
+        - Shell
+        - Objective-C
+        - PowerShell
+  - type: textarea
+    id: Additional
+    attributes:
+      label: Additional information
+      description: Add any additional information that you think is necessary.
+      required: false
