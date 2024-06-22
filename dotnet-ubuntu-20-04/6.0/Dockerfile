@@ -45,5 +45,5 @@ WORKDIR /home/$USERNAME
 # Sudo test
 RUN sudo apt-get update
 
-# Install .NET SDK
-ENTRYPOINT [ "sudo", "bash", "/entrypoint.sh" ]
+# Run entrypoint script
+RUN sudo bash /entrypoint.sh
